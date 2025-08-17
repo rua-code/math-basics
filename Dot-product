@@ -1,0 +1,18 @@
+import numpy as np 
+
+lst1=input("Enter vector A (space separated):").split()
+lst1 = [int(x) for x in lst1] 
+vctr1= np.array(lst1)
+print("Vector created from a list:",vctr1) 
+
+lst2=input("Enter vector B (space separated):").split()
+lst2 = [int(x) for x in lst2] 
+vctr2= np.array(lst2)
+print("Vector created from a list:",vctr2) 
+
+
+if vctr1.shape != vctr2.shape:
+    print("\nError: Vectors must have the same length!")
+else:
+    numpy_dot = np.dot(vctr1, vctr2)
+    print(f"NumPy dot product: {numpy_dot}")
